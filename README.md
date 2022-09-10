@@ -18,17 +18,19 @@ no. 4, pp. 1–11, 2018.
 
 ---
 
-# 💾 Installation
+# 💾 Installation on Ubuntu/Debian
 
-Install `python3` and `pip` via:
+Install `python3`, `pip` and `venv`  via:
 
 ```bash
-sudo apt-get install python3.8 python3-pip
+sudo apt-get install python3-pip python3-venv
 ```
 
-Clone and install the repo:
+Clone and install the repo in a virtual environment:
 
 ```bash
+python3 -m venv mann-pytorch-env
+source mann-pytorch-env/bin/activate
 git clone https://github.com/ami-iit/mann-pytorch.git
 cd mann-pytorch
 pip install .
