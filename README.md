@@ -33,6 +33,7 @@ python3 -m venv mann-pytorch-env
 source mann-pytorch-env/bin/activate
 git clone https://github.com/ami-iit/mann-pytorch.git
 cd mann-pytorch
+pip install -r requirements.txt
 pip install .
 ```
 
