@@ -12,7 +12,8 @@ def convert_model(model_path: Path, onnx_model_path: Path, opset_version: int):
 
     # Input to the model
     batch_size = 1
-    x = torch.randn(batch_size, 137, requires_grad=True)
+    input_size = next(mann_restored.parameters()).size()[1]
+    x = torch.randn(batch_size, input_size, requires_grad=True)
 
     # Export the model
     torch.onnx.export(mann_restored,  # model being run
